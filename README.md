@@ -21,9 +21,9 @@ First, you would need to run this. This may be optional if you have not installe
 
 ` $ pip install -r requirements.txt`
 
-After making sure you have all necessary modules, run the script using this file.
+After making sure you have all necessary modules, run the script using the file `filtration.py`:
 
-`$ python3 denoise.py`
+`$ python3 filtration.py`
  
 The filtered output will be saved in a wav file named `filtered.wav` in the current directory. Once you play the audio, you will notice the difference from the original audio file. Moreover, you will find the graphs saved as `before_filtering.png`, `after_filtering.png` and `comparison.png` for finding the graphs of the wav files before and after filtration process.
 
@@ -71,3 +71,5 @@ The results of the Pacman wav file is given below. As you can see how the audio 
 - [Pacman Audio](https://www.wavsource.com/video_games/pac-man.htm)
 - [Moving Average/Running Mean](https://en.wikipedia.org/wiki/Moving_average)
 - [Interpreting the Wav data for graphing](http://stackoverflow.com/questions/2226853/interpreting-wav-data/2227174#2227174)
+- [How to achieve Window Sizes](http://dsp.stackexchange.com/questions/9966/what-is-the-cut-off-frequency-of-a-moving-average-filter)
+- [Theory Part from the course website](https://cmsc388v.gitlab.io/)
