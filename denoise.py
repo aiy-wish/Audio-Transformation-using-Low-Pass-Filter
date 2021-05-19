@@ -1,9 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import wave
-import sys
 import math
-import contextlib
 from scipy.io import wavfile
 
 
@@ -27,7 +25,7 @@ def plotGraph(filename,title,savetitle,flag):
     
     #plt.figure(1)
     plt.figure(figsize=(16, 8)) 
-    plt.title(title)
+    #plt.title(title)
 
     plot_a = plt.subplot(211)
     plot_a.plot(sig)
@@ -47,6 +45,7 @@ def plotGraph(filename,title,savetitle,flag):
 
 def plotTwoGraph(filename,outname,title,savetitle,flag):
     
+
     signal_wave1 = wave.open(filename, 'r')
     signal_wave2 = wave.open(outname, 'r')
 
@@ -59,7 +58,7 @@ def plotTwoGraph(filename,outname,title,savetitle,flag):
 
     
     #plt.figure(1)
-    plt.title(title)
+    #plt.title(title)
 
     plot_a = plt.subplot(211)
     plot_a.plot(sig2)
@@ -102,6 +101,7 @@ def interpret_wav(raw_bytes, n_frames, n_channels, sample_width, interleaved = T
         channels.shape = (n_channels, n_frames)
 
     return channels
+    
 
 def main():
     spf = wave.open(fname,'rb')
@@ -129,9 +129,9 @@ def main():
     wav_file.close()
 
     flag = False
-    plotGraph(fname,"Before Filtering",'Figure1.png',False)
-    plotTwoGraph(fname,outname,"Comparison",'Figure3.png',True)
-    plotGraph(outname,"After Filtering",'Figure2.png',False)
+    plotGraph(fname,"Before Filtering",'before_filtering.png',False)
+    plotTwoGraph(fname,outname,"Comparison",'comparison.png',True)
+    plotGraph(outname,"After Filtering",'after_filtering.png',False)
 
 
 if __name__ == "__main__":
