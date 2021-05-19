@@ -51,20 +51,23 @@ And after finding the running mean, we then write to the output wav file named `
 
 ## Results
 
-Conclusion is that blah blah blah
+The results of the Pacman wav file is given below. As you can see how the audio was filtered based on the resultant output. We plotted two graphs: a plot graph and a specgram to show the differences.
 
-Before
+### Before
 
-![A test image](before_filtering.png)
+![before_filtration](before_filtering.png)
 
 
-After
+### After
 
-![A test image](after_filtering.png)
+![after_filtration](after_filtering.png)
+
+### Comparison
+
+![comparison](comparison.png)
+
 
 ## References
-- https://www.wavsource.com/video_games/pac-man.htm
-- https://en.wikipedia.org/wiki/Moving_average
-- http://stackoverflow.com/questions/13728392/moving-average-or-running-mean
-- http://stackoverflow.com/questions/2226853/interpreting-wav-data/2227174#2227174
-- http://dsp.stackexchange.com/questions/9966/what-is-the-cut-off-frequency-of-a-moving-average-filter
+- [Pacman Audio](https://www.wavsource.com/video_games/pac-man.htm)
+- [Moving Average/Running Mean](https://en.wikipedia.org/wiki/Moving_average)
+- [Interpreting the Wav data for graphing](http://stackoverflow.com/questions/2226853/interpreting-wav-data/2227174#2227174)
