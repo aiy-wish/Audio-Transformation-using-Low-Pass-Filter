@@ -4,19 +4,28 @@
 
 In my initial proposal, i have mentioned that my final project will aim towards removing noise using Fast Fourier Transformation (FFT), which i initially planned to do. However, based on the instructor's feedback on my proposal and my own research on this topic, the project seems a lot harder to implement than i thought of. The challenge here was to be able to work with a realtime audio source, which would make the computation of the FTT a bit hard.
 
-Hence, i have tried something simpler which was to use low-pass filter on `.wav` format audio files where
+Hence, i have tried something simpler which was to use low-pass filter on `.wav` format audio files, which removes the highest frequencies and averages out anything beyond the threshold frequency. The reason why i chose to work on this is because i have noticed how some audios (especially the one's from the 80's) have a static noise which sounds quite annoying to any ears in times where we have refined audio quality by a lot through research and innovation. For this project, i tried this script on a audio from the game Pacman and other sample audio files from David Letterman's show as i found those to be ideal for the filtration.
 
 ## Setup
 
-First this
+I have used Ubuntu for this project, hence i am not sure if one might run into problems while using Windows or MacOS.
+
+The modules/libraries i have used for this project are:
+- `matplotlib` for plotting the graphs
+- `scipy.io` for wavfile interpretation
+- `numpy` for every complex mathematical calculations which may take more steps if i had used the `math` library
+- `wave` for file I/O purposes
+- `math` for performing basic calculations.
+
+First, you would need to run this. This may be optional if you have not installed the modules mentioned above.
 
 ` $ pip install -r requirements.txt`
 
-Then run
+After making sure you have all necessary modules, run the script using this file.
 
 `$ python3 denoise.py`
  
-The filtered output will be saved in a wav file named `filtered.wav` in the current directory. Once you play the audio, you will notice the difference from the original audio file.
+The filtered output will be saved in a wav file named `filtered.wav` in the current directory. Once you play the audio, you will notice the difference from the original audio file. Moreover, you will find the graphs saved as `before_filtering.png`, `after_filtering.png` and `comparison.png` for finding the graphs of the wav files before and after filtration process.
 
 ## Implementation
 
@@ -46,7 +55,12 @@ Conclusion is that blah blah blah
 
 Before
 
+![A test image](before_filtering.png)
+
+
 After
+
+![A test image](after_filtering.png)
 
 ## References
 - https://www.wavsource.com/video_games/pac-man.htm
