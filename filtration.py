@@ -5,16 +5,14 @@ import math
 from scipy.io import wavfile
 
 
-#https://www.wavsource.com/video_games/pac-man.htm
 fname = 'sample_inputs/pacman_x.wav'
 outname = 'filtered.wav'
 
 cutOffFrequency = 400.0
 
-# from http://stackoverflow.com/questions/13728392/moving-average-or-running-mean
 def running_mean(x, windowSize):
-  cumsum = np.cumsum(np.insert(x, 0, 0)) 
-  return (cumsum[windowSize:] - cumsum[:-windowSize]) / windowSize
+  cummulative = np.cumsum(np.insert(x, 0, 0)) 
+  return (cummulative [windowSize:] - cummulative [:-windowSize]) / windowSize
 
 def plotGraph(filename,title,savetitle,flag):
     
@@ -80,7 +78,6 @@ def plotTwoGraph(filename,outname,title,savetitle,flag):
 
 
 
-# from http://stackoverflow.com/questions/2226853/interpreting-wav-data/2227174#2227174
 def interpret_wav(raw_bytes, n_frames, n_channels, sample_width, interleaved = True):
 
     if sample_width == 1:
@@ -115,8 +112,6 @@ def main():
     spf.close()
     channels = interpret_wav(signal, nFrames, nChannels, ampWidth, True)
 
-    # get window size
-    # from http://dsp.stackexchange.com/questions/9966/what-is-the-cut-off-frequency-of-a-moving-average-filter
     freqRatio = (cutOffFrequency/sampleRate)
     N = int(math.sqrt(0.196196 + freqRatio**2)/freqRatio)
 
