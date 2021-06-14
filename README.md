@@ -1,5 +1,7 @@
 # Audio Transformation using Low Pass Filter
 
+[![forthebadge made-with-python](http://ForTheBadge.com/images/badges/made-with-python.svg)](https://www.python.org/)
+
 ## Setup
 
 I have used Ubuntu for this project, hence i am not sure if one might run into problems while using Windows or MacOS.
